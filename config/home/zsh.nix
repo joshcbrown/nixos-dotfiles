@@ -57,4 +57,7 @@ lib.mkIf (theShell == "zsh") {
       neofetch="neofetch --ascii ~/.config/ascii-neofetch";
     };
   };
+  home.packages = with pkgs; [
+    bat fd dust lazygit
+  ];
 }

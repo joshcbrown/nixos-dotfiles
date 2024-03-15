@@ -20,7 +20,7 @@ in with lib; {
     extraConfig = let
       modifier = "SUPER";
     in concatStrings [ ''
-      monitor=,preferred,auto,1
+      monitor=highrr,preferred,auto,1
       windowrule = fullscreen, ^(wlogout)$
       windowrule = animation fade,^(wlogout)$
       general {

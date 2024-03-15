@@ -25,7 +25,6 @@ lib.mkIf (theShell == "zsh") {
       bindkey '^[[1;3C' forward-word                  # Key Alt + Right
       bindkey '^[[H' beginning-of-line                # Key Home
       bindkey '^[[F' end-of-line                      # Key End
-      neofetch
       if [ -f $HOME/.zshrc-personal ]; then
         source $HOME/.zshrc-personal
       fi
@@ -49,15 +48,16 @@ lib.mkIf (theShell == "zsh") {
       flake-update="nh os switch --nom --hostname ${hostname} --update";
       gcCleanup="nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
       v="nvim";
-      ls="lsd";
-      ll="lsd -l";
-      la="lsd -a";
-      lal="lsd -al";
+      ls="eza";
+      ll="eza -l";
+      la="eza -a";
+      lt="eza --tree -d 3";
+      lg="lazygit";
       ".."="cd ..";
       neofetch="neofetch --ascii ~/.config/ascii-neofetch";
     };
   };
   home.packages = with pkgs; [
-    bat fd du-dust lazygit
+    bat fd du-dust lazygit eza
   ];
 }

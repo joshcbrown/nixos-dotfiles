@@ -26,9 +26,9 @@ in {
   wallpaperDir = "${userHome}/Pictures/Wallpapers";
   screenshotDir = "${userHome}/Pictures/Screenshots";
   flakeDir = "${flakeDir}";
-  flakePrev = "${userHome}/.zaneyos-previous";
-  flakeBackup = "${userHome}/.zaneyos-backup";
-  terminal = "wezterm"; # This sets the terminal that is used by the hyprland terminal keybinding
+  flakePrev = "${userHome}/.dotfiles.bak";
+  flakeBackup = "${userHome}/.dotfiles.backup";
+  terminal = "kitty"; # This sets the terminal that is used by the hyprland terminal keybinding
 
   # System Settings
   clock24h = true;

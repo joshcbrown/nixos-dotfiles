@@ -8,14 +8,14 @@ let
   hostname = "nixos";
   userHome = "/home/${username}";
   flakeDir = "${userHome}/.dotfiles";
-  waybarStyle = "simplebar"; # simplebar, slickbar, or default
+  waybarStyle = "default"; # simplebar, slickbar, or default
 in {
   # User Variables
   username = "josh";
   hostname = "nixos";
   gitUsername = "Josh Brown";
   gitEmail = "joshcarlbrown@gmail.com";
-  theme = "atelier-cave";
+  theme = "tokyo-night-storm";
   slickbar = if waybarStyle == "slickbar" then true else false;
   simplebar = if waybarStyle == "simplebar" then true else false;
   bar-number = true; # Enable / Disable Workspace Numbers In Waybar

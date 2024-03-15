@@ -58,6 +58,6 @@ lib.mkIf (theShell == "zsh") {
     };
   };
   home.packages = with pkgs; [
-    bat fd dust lazygit
+    bat fd du-dust lazygit
   ];
 }

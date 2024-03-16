@@ -1,8 +1,16 @@
 {pkgs}:
 pkgs.rustPlatform.buildRustPackage rec {
+  pname = "caydence";
+  version = "0.1.0";
+  buildInputs = with pkgs; [
+    pkg-config # Recommended for finding library paths
+    libnotify
+    gdk-pixbuf
+    glib
+  ];
   src = pkgs.fetchCrate {
-    crateName = "caydence";
-    version = "0.1.0";
+    crateName = pname;
+    version = version;
     sha256 = "026p64n3a3alw5fir0xnnb8h8bd53lqq9028r6685qsfh7fxb9n9";
   };
 

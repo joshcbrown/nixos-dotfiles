@@ -3,3 +3,4 @@ vim.opt.guicursor.a = { "blinkon=0" }
 
 vim.keymap.set("n", "<leader>fs", "<cmd>w<cr>")
 vim.keymap.set("n", "<leader>qq", "<cmd>wqa<cr>")
+vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>")

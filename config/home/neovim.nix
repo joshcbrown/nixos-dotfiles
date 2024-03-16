@@ -64,6 +64,7 @@ in {
           tailwindcss.enable = true;
         };
       };
+      notify.enable = true;
       rust-tools = {
         enable = true;
       };

@@ -37,8 +37,8 @@ in {
       telescope = {
         enable = true;
         keymaps = {
-          "<leader>ff" = "find_files";
-          "<leader>lg" = "live_grep";
+          "<leader><leader>" = "find_files";
+          "<leader>/" = "live_grep";
         };
       };
       nvim-colorizer.enable = true;

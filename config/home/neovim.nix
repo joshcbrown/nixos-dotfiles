@@ -167,6 +167,7 @@ in {
         tabline = {},
         extensions = {},
       }
+      vim.opt.guicursor.a = { "blinkon=0" }
     '';
 
     extraConfigVim = ''

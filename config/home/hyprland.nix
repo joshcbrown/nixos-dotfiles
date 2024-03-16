@@ -137,6 +137,7 @@ in
                  exec-once = dbus-update-activation-environment --systemd --all
                  exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
                  exec-once = swww init
+                 exec-once = caydence daemon /home/josh/.dotfiles/wallpapers/
                  exec-once = waybar
                  exec-once = swaync
                  exec-once = nm-applet --indicator
@@ -167,10 +168,11 @@ in
                  bind = ${modifier},O,exec,obs
                  bind = ${modifier},G,exec,gimp
                  bind = ${modifier}SHIFT,G,exec,godot4
-                 bind = ${modifier},T,exec,thunar
                  bind = ${modifier},M,exec,spotify
                  bind = ${modifier},Q,killactive,
-                 bind = ${modifier},P,pseudo,
+                 bind = ${modifier},P,exec,caydence client toggle,
+                 bind = ${modifier},X,exec,caydence client skip,
+                 bind = ${modifier},T,exec,caydence client time,
                  bind = ${modifier}SHIFT,I,togglesplit,
                  bind = ${modifier},F,fullscreen,
                  bind = ${modifier}SHIFT,F,togglefloating,

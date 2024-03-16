@@ -151,7 +151,6 @@ in
                  }
                  bind = ${modifier},Return,exec,${terminal}
                  bind = ${modifier}SHIFT,Return,exec,rofi-launcher
-                 bind = ${modifier}SHIFT,W,exec,web-search
                  bind = ${modifier}SHIFT,N,exec,swaync-client -rs
                  ${
               if browser == "google-chrome"
@@ -170,9 +169,9 @@ in
                  bind = ${modifier}SHIFT,G,exec,godot4
                  bind = ${modifier},M,exec,spotify
                  bind = ${modifier},Q,killactive,
-                 bind = ${modifier},P,exec,caydence client toggle,
-                 bind = ${modifier},X,exec,caydence client skip,
-                 bind = ${modifier},T,exec,caydence client time,
+                 bind = ${modifier},P,exec,caydence client toggle
+                 bind = ${modifier},X,exec,caydence client skip
+                 bind = ${modifier},T,exec,caydence client time
                  bind = ${modifier}SHIFT,I,togglesplit,
                  bind = ${modifier},F,fullscreen,
                  bind = ${modifier}SHIFT,F,togglefloating,

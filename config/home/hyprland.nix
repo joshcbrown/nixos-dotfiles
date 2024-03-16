@@ -161,13 +161,9 @@ in
                 bind = ${modifier},W,exec,${browser}
               ''
             }
-                 bind = ${modifier},E,exec,emopicker9000
                  bind = ${modifier},S,exec,screenshootin
                  bind = ${modifier},D,exec,discord
-                 bind = ${modifier},O,exec,obs
                  bind = ${modifier},G,exec,gimp
-                 bind = ${modifier}SHIFT,G,exec,godot4
-                 bind = ${modifier},M,exec,spotify
                  bind = ${modifier},Q,killactive,
                  bind = ${modifier},P,exec,caydence client toggle
                  bind = ${modifier},X,exec,caydence client skip

@@ -42,9 +42,6 @@ in {
       nvim-autopairs.enable = true;
       nix.enable = true;
       comment-nvim.enable = true;
-      lualine = {
-        enable = true;
-      };
       startup = {
         enable = true;
         theme = "dashboard";
@@ -55,11 +52,6 @@ in {
           tsserver.enable = true;
           lua-ls.enable = true;
           bashls.enable = true;
-          rust-analyzer = {
-            enable = true;
-            installRustc = true;
-            installCargo = true;
-          };
           nixd.enable = true;
           html.enable = true;
           ccls.enable = true;
@@ -71,6 +63,9 @@ in {
           pyright.enable = true;
           tailwindcss.enable = true;
         };
+      };
+      rust-tools = {
+        enable = true;
       };
       conform-nvim = {
         enable = true;
@@ -101,12 +96,17 @@ in {
           };
         };
       };
+      which-key = {
+        enable = true;
+        registrations = {
+          "<leader>fs" = "file save";
+        };
+      };
     };
 
     extraPlugins = [plugins.telescope-file-browser-nvim];
 
-    # FOR NEOVIDE
-    extraConfigLua = builtins.readFile "./nvim/config.lua";
+    extraConfigLua = builtins.readFile ./nvim/config.lua;
 
     extraConfigVim = ''
       set noshowmode

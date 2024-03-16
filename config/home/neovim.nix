@@ -30,6 +30,10 @@ in {
 
     plugins = {
       barbecue.enable = true;
+      bufferline = {
+        enable = true;
+        alwaysShowBufferline = false;
+      };
       gitsigns.enable = true;
       telescope = {
         enable = true;

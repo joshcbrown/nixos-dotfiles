@@ -61,6 +61,7 @@ in {
     (import ./../scripts/rofi-launcher.nix {inherit pkgs;})
     (import ./../scripts/screenshootin.nix {inherit pkgs;})
     (import ./../scripts/list-hypr-bindings.nix {inherit pkgs;})
+    (pkgs.callPackage ../pkgs/caydence.nix {})
   ];
 
   programs.gh.enable = true;

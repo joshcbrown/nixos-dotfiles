@@ -1,14 +1,13 @@
 # PLEASE READ THE WIKI FOR DETERMINING
-# WHAT TO PUT HERE AS OPTIONS. 
+# WHAT TO PUT HERE AS OPTIONS.
 # https://gitlab.com/Zaney/zaneyos/-/wikis/Setting-Options
-
 let
   # THINGS YOU NEED TO CHANGE
   username = "josh";
   hostname = "nixos";
   userHome = "/home/${username}";
   flakeDir = "${userHome}/.dotfiles";
-  waybarStyle = "default"; # simplebar, slickbar, or default
+  waybarStyle = "slickbar"; # simplebar, slickbar, or default
 in {
   # User Variables
   username = "josh";
@@ -16,13 +15,19 @@ in {
   gitUsername = "Josh Brown";
   gitEmail = "joshcarlbrown@gmail.com";
   theme = "tokyo-night-storm";
-  slickbar = if waybarStyle == "slickbar" then true else false;
-  simplebar = if waybarStyle == "simplebar" then true else false;
+  slickbar =
+    if waybarStyle == "slickbar"
+    then true
+    else false;
+  simplebar =
+    if waybarStyle == "simplebar"
+    then true
+    else false;
   bar-number = true; # Enable / Disable Workspace Numbers In Waybar
   borderAnim = false;
   browser = "firefox";
   wallpaperGit = "https://gitlab.com/Zaney/my-wallpapers.git"; # This will give you my wallpapers
-  # ^ (use as is or replace with your own repo - removing will break the wallsetter script) 
+  # ^ (use as is or replace with your own repo - removing will break the wallsetter script)
   wallpaperDir = "${userHome}/Pictures/Wallpapers";
   screenshotDir = "${userHome}/Pictures/Screenshots";
   flakeDir = "${flakeDir}";
@@ -77,8 +82,7 @@ in {
 
   # Enable Python & PyCharm
   python = false;
-  
+
   # Enable SyncThing
   syncthing = false;
-
 }

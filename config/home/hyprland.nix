@@ -16,7 +16,6 @@
     borderAnim
     theKBDLayout
     terminal
-    theSecondKBDLayout
     theKBDVariant
     sdl-videodriver
     ;
@@ -48,7 +47,7 @@ in
                  }
 
                  input {
-                   kb_layout = ${theKBDLayout}, ${theSecondKBDLayout}
+                   kb_layout = ${theKBDLayout}
             kb_options = grp:alt_shift_toggle
                    kb_options=caps:super
                    follow_mouse = 1

@@ -7,14 +7,13 @@
     (import ../../options.nix)
     theKBDVariant
     theKBDLayout
-    theSecondKBDLayout
     ;
 in {
   services.xserver = {
     enable = true;
     xkb = {
       variant = "${theKBDVariant}";
-      layout = "${theKBDLayout}, ${theSecondKBDLayout}";
+      layout = "${theKBDLayout}";
     };
     libinput.enable = true;
     displayManager.sddm = {

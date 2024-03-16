@@ -42,18 +42,8 @@ in {
     alejandra
     zoxide
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
-    # Import Scripts
-    (import ./../scripts/task-waybar.nix {inherit pkgs;})
-    (import ./../scripts/squirtle.nix {inherit pkgs;})
-    (import ./../scripts/themechange.nix {
-      inherit pkgs;
-      inherit flakeDir;
-    })
-    (import ./../scripts/theme-selector.nix {inherit pkgs;})
-    (import ./../scripts/nvidia-offload.nix {inherit pkgs;})
     (import ./../scripts/rofi-launcher.nix {inherit pkgs;})
     (import ./../scripts/screenshootin.nix {inherit pkgs;})
-    (import ./../scripts/list-hypr-bindings.nix {inherit pkgs;})
     (pkgs.callPackage ../pkgs/caydence.nix {})
   ];
 

@@ -31,7 +31,6 @@
     cowsay
     lsd
     lshw
-    pkg-config
     meson
     hugo
     gnumake
@@ -51,7 +50,6 @@
     yad
     playerctl
     nh
-    glib
   ];
 
   programs = {

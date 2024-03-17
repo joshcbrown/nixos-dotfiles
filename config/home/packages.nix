@@ -12,7 +12,7 @@
     flakeDir
     ;
 in {
-  # Install Packages For The User
+  fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     pkgs."${browser}"
     discord
@@ -29,7 +29,6 @@ in {
     mpv
     gimp
     obs-studio
-    rustup
     audacity
     pavucontrol
     tree
@@ -41,7 +40,9 @@ in {
     swaylock
     alejandra
     zoxide
-    (nerdfonts.override {fonts = ["JetBrainsMono"];})
+    filelight
+    jetbrains-mono
+    (nerdfonts.override {fonts = ["JetBrainsMono" "FiraCode" "NerdFontsSymbolsOnly"];})
     (import ./../scripts/rofi-launcher.nix {inherit pkgs;})
     (import ./../scripts/screenshootin.nix {inherit pkgs;})
     (pkgs.callPackage ../pkgs/caydence.nix {})

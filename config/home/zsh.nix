@@ -12,6 +12,14 @@ in
       syntaxHighlighting.enable = true;
       enableAutosuggestions = true;
       historySubstringSearch.enable = true;
+      plugins = [
+        {
+          name = "vi-mode";
+          src = pkgs.zsh-vi-mode;
+          file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+        }
+      ];
+
       profileExtra = ''
         #if [ -z "$DISPLAY" ] && [ "$XDG_VNTR" = 1 ]; then
         #  exec Hyprland
@@ -49,8 +57,8 @@ in
       };
       shellAliases = {
         sv = "sudo nvim";
-        flake-rebuild = "nh os switch --nom --hostname ${hostname}";
-        flake-update = "nh os switch --nom --hostname ${hostname} --update";
+        rebuild = "nh os switch --nom --hostname ${hostname}";
+        update = "nh os switch --nom --hostname ${hostname} --update";
         gcCleanup = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
         v = "nvim";
         ls = "eza";

@@ -45,6 +45,7 @@ in {
     (import ./../scripts/rofi-launcher.nix {inherit pkgs;})
     (import ./../scripts/screenshootin.nix {inherit pkgs;})
     (pkgs.callPackage ../pkgs/caydence.nix {})
+    (pkgs.callPackage ../pkgs/cargo-wizard.nix {})
   ];
 
   programs.gh.enable = true;

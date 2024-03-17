@@ -1,15 +1,15 @@
-{ pkgs, config, ... }:
-
 {
+  pkgs,
+  config,
+  ...
+}: {
   imports = [
     # Enable &/ Configure Programs
     ./alacritty.nix
     ./bash.nix
     ./gtk-qt.nix
     ./hyprland.nix
-    ./kdenlive.nix
     ./kitty.nix
-    ./neofetch.nix
     ./neovim.nix
     ./packages.nix
     ./rofi.nix
@@ -20,7 +20,6 @@
     ./swaylock.nix
     ./swaync.nix
     ./wezterm.nix
-    ./zeroad.nix
     ./zsh.nix
 
     # Place Home Files Like Pictures

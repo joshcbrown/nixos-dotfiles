@@ -5,10 +5,10 @@ pkgs.rustPlatform.buildRustPackage rec {
   src = pkgs.fetchCrate {
     crateName = pname;
     version = version;
-    sha256 = "026p64n3a3alw5fir0xnnb8h8bd53lqq9028r6685qsfh7fxb9n9";
+    sha256 = "sha256-LBly3Lnj3ohgolcLv/DKPHJz8a68BaqHfSvQJioLmns=";
   };
 
-  cargoSha256 = "sha256-6+kyb1zmNEDrVdh0gQJL5IyEwEUWWdtGtRzknBaETDs=";
+  cargoSha256 = "sha256-wUMdWGUJR9dJ4XRlDFAvHwxCzLSb3WdRhrXt0kr2+Fc=";
 
   meta = with pkgs.lib; {
     description = "Cargo subcommand for configuring Cargo projects for best performance. ";

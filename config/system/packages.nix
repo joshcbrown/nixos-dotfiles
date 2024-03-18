@@ -50,6 +50,7 @@
     yad
     playerctl
     nh
+    dropbox
   ];
 
   programs = {

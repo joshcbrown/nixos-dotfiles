@@ -30,6 +30,7 @@ in {
 
     plugins = {
       barbecue.enable = true;
+      indent-blankline.enable = true;
       bufferline = {
         enable = true;
       };

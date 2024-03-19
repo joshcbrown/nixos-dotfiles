@@ -42,6 +42,7 @@ in {
     zoxide
     filelight
     jetbrains-mono
+    anki
     (nerdfonts.override {fonts = ["JetBrainsMono" "FiraCode" "NerdFontsSymbolsOnly"];})
     (import ./../scripts/rofi-launcher.nix {inherit pkgs;})
     (import ./../scripts/screenshootin.nix {inherit pkgs;})

@@ -67,6 +67,23 @@ in {
           pyright.enable = true;
           tailwindcss.enable = true;
         };
+        keymaps = {
+          lspBuf = {
+            K = "hover";
+            gi = "implementation";
+            gd = "definition";
+            gD = "declaration";
+            gr = "references";
+            gt = "type_definition";
+            "<leader>cr" = "rename";
+            ca = "code_action";
+            cr = "rename";
+          };
+          diagnostic = {
+            "]d" = "goto_next";
+            "[d" = "goto_prev";
+          };
+        };
       };
       notify.enable = true;
       rust-tools = {

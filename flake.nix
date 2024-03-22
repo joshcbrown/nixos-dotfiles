@@ -1,5 +1,5 @@
 {
-  description = "ZaneyOS";
+  description = "josh's setup";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -16,40 +16,49 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     impermanence.url = "github:nix-community/impermanence";
+    caydence.url = "github:joshcbrown/caydence";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, impermanence, ... }:
-  let
+  outputs = inputs @ {
+    nixpkgs,
+    home-manager,
+    impermanence,
+    ...
+  }: let
     system = "x86_64-linux";
     inherit (import ./options.nix) username hostname;
 
     pkgs = import nixpkgs {
       inherit system;
       config = {
-	    allowUnfree = true;
+        allowUnfree = true;
       };
     };
   in {
     nixosConfigurations = {
       "${hostname}" = nixpkgs.lib.nixosSystem {
-	specialArgs = { 
-          inherit system; inherit inputs; 
-          inherit username; inherit hostname;
+        specialArgs = {
+          inherit system;
+          inherit inputs;
+          inherit username;
+          inherit hostname;
         };
-	modules = [ 
-	  ./system.nix
-	  impermanence.nixosModules.impermanence
-          home-manager.nixosModules.home-manager {
-	    home-manager.extraSpecialArgs = {
-	      inherit username; inherit inputs;
+        modules = [
+          ./system.nix
+          impermanence.nixosModules.impermanence
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.extraSpecialArgs = {
+              inherit username;
+              inherit inputs;
               inherit (inputs.nix-colors.lib-contrib {inherit pkgs;}) gtkThemeFromScheme;
             };
-	    home-manager.useGlobalPkgs = true;
+            home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-	    home-manager.users.${username} = import ./home.nix;
-	  }
-	];
+            home-manager.users.${username} = import ./home.nix;
+          }
+        ];
       };
     };
   };

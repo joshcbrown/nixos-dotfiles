@@ -4,8 +4,14 @@
   ...
 }: {
   # Bootloader
-  boot.loader.grub.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    grub = {
+      enable = true;
+      device = "nodev";
+    };
+    efi.canTouchEfiVariables = true;
+  };
+
   boot.kernel.sysctl = {"vm.max_map_count" = 2147483642;};
   boot.tmp.useTmpfs = true;
   boot.tmp.tmpfsSize = "25%";

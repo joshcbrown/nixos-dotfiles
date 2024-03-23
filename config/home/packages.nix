@@ -45,6 +45,7 @@ in {
     jetbrains-mono
     anki
     signal-desktop
+    cachix
     inputs.caydence.packages."${pkgs.system}".default
     (nerdfonts.override {fonts = ["JetBrainsMono" "FiraCode" "NerdFontsSymbolsOnly"];})
     (import ./../scripts/rofi-launcher.nix {inherit pkgs;})

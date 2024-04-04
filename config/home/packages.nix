@@ -54,6 +54,9 @@ in {
   ];
 
   programs.gh.enable = true;
+  programs.emacs = {
+    enable = true;
+  };
   programs.direnv = {
     enable = true;
     enableZshIntegration = true;

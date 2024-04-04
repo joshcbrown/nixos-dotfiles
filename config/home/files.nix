@@ -16,4 +16,8 @@
     source = ./files/wlogout;
     recursive = true;
   };
+  home.file.".config/doom" = {
+    source = ./files/doom;
+    recursive = true;
+  };
 }

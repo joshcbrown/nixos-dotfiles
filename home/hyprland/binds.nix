@@ -13,7 +13,7 @@ let
 
   runOnce = program: "pgrep ${program} || uwsm app -- ${program}";
 in {
-  programs.hyprland.settings = {
+  wayland.windowManager.hyprland.settings = {
     # mouse movements
     bindm = [
       "$mod, mouse:272, movewindow"

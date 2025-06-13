@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }: {
-  programs.hyprland.settings = {
+  wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
     env = [
       "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"

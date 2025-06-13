@@ -22,5 +22,7 @@
     cargo
     nixfmt-classic
     wl-clipboard
+    haskell.compiler.ghc910
+    cabal-install
   ];
 }

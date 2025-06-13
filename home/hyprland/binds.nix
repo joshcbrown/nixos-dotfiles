@@ -25,7 +25,6 @@ in {
     bind = [
       # compositor commands
       "$mod SHIFT, E, exec, pkill Hyprland"
-      "$mod, D, exec, pkill anyrun || uwsm app -- anyrun"
       "$mod, Q, killactive,"
       "$mod, F, fullscreen,"
       "$mod, G, togglegroup,"

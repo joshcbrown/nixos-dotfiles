@@ -109,7 +109,7 @@
 
     permission = [
       # Allow xdph and grim
-      "${config.programs.hyprland.portalPackage}/libexec/.xdg-desktop-portal-hyprland-wrapped, screencopy, allow"
+      #"${config.programs.hyprland.portalPackage}/libexec/.xdg-desktop-portal-hyprland-wrapped, screencopy, allow"
       "${lib.getExe pkgs.grim}, screencopy, allow"
       # Optionally allow non-pipewire capturing
       "${lib.getExe pkgs.wl-screenrec}, screencopy, allow"

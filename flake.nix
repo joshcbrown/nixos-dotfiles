@@ -12,6 +12,7 @@
       url = "github:hyprwm/contrib";
       inputs.nixpkgs.follows = "hyprland/nixpkgs";
     };
+    anyrun.url = "github:fufexan/anyrun/launch-prefix";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {

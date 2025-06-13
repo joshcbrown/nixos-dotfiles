@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ pkgs, lib, ... }: {
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
     env = [
@@ -12,6 +12,7 @@
     exec-once = [
       # finalize startup
       "uwsm finalize"
+      "waybar"
       # set cursor for HL itself
       # "hyprctl setcursor ${cursorName} ${toString 16}"
       # "hyprlock"

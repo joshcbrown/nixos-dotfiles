@@ -2,6 +2,7 @@
   imports = [
     ./term
     ./packages.nix
+    ./waybar.nix
     ./files.nix
     ./hyprland
     ./anyrun

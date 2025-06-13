@@ -1,1 +1,1 @@
-{ import = [ ./hyprpaper.nix ]; }
+{ imports = [ ./hyprpaper.nix ]; }

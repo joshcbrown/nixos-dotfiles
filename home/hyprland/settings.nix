@@ -17,12 +17,13 @@
       # "hyprlock"
     ];
 
-    monitor = [ "DP-1,1920x1080@144,0x0,1" ];
-
     general = {
       gaps_in = 4;
       gaps_out = 8;
-      border_size = 3;
+      border_size = 1;
+      "col.active_border" = "rgba(88888888)";
+      "col.inactive_border" = "rgba(00000088)";
+
       allow_tearing = true;
       resize_on_border = true;
     };
@@ -48,6 +49,7 @@
 
       shadow = {
         enabled = true;
+        color = "rgba(00000055)";
         ignore_window = true;
         offset = "0 15";
         range = 100;
@@ -69,7 +71,11 @@
       groupbar = {
         font_size = 10;
         gradients = false;
+        text_color = "rgb(b6c4ff)";
       };
+
+      "col.border_active" = "rgba(35447988)";
+      "col.border_inactive" = "rgba(dce1ff88)";
     };
 
     input = {

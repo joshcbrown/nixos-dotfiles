@@ -1,1 +1,1 @@
-{ imports = [ ./wezterm.nix ]; }
+{ imports = [ ./wezterm.nix ./zsh.nix ]; }

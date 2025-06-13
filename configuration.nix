@@ -7,6 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      ./system/fonts.nix
       ./hardware-configuration.nix
     ];
 

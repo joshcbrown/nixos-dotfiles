@@ -5,11 +5,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./system/fonts.nix
-      ./hardware-configuration.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./system/fonts.nix
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -85,9 +84,10 @@
     isNormalUser = true;
     description = "josh";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    packages = with pkgs;
+      [
+        #  thunderbird
+      ];
   };
 
   # Install firefox.
@@ -99,9 +99,15 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.auto-optimise-store = true;
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 1w";
+  };
   environment.systemPackages = with pkgs; [
-  neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  git
+    neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    git
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

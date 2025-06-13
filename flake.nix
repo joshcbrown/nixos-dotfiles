@@ -13,17 +13,6 @@
       inputs.nixpkgs.follows = "hyprland/nixpkgs";
     };
     anyrun.url = "github:fufexan/anyrun/launch-prefix";
-    hyprpaper = {
-      url = "github:hyprwm/hyprpaper";
-      inputs = {
-        hyprgraphics.follows = "hyprland/hyprgraphics";
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-        systems.follows = "hyprland/systems";
-      };
-    };
-
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs: {

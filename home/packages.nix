@@ -21,5 +21,6 @@
     python3
     cargo
     nixfmt-classic
+    wl-clipboard
   ];
 }

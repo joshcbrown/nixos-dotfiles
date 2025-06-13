@@ -27,7 +27,7 @@
       allow_tearing = true;
       resize_on_border = true;
     };
-    monitor = [ "monitor=DP-1,1920x1080@144,0x0,1" ];
+    monitor = [ "DP-1,1920x1080@144,0x0,1" ];
 
     decoration = {
       rounding = 10;

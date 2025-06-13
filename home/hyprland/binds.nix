@@ -33,7 +33,7 @@ in {
       "$mod SHIFT, N, changegroupactive, f"
       "$mod SHIFT, P, changegroupactive, b"
       "$mod, R, togglesplit,"
-      "$mod, T, togglefloating,"
+      "$mod SHIFT, space, togglefloating,"
       "$mod, P, pseudo,"
       "$mod ALT, ,resizeactive,"
 
@@ -52,6 +52,10 @@ in {
       "$mod, L, movefocus, r"
       "$mod, K, movefocus, u"
       "$mod, J, movefocus, d"
+      "$mod SHIFT, H, movewindow, l"
+      "$mod SHIFT, L, movewindow, r"
+      "$mod SHIFT, K, movewindow, u"
+      "$mod SHIFT, J, movewindow, d"
 
       # screenshot
       # area

@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./term ];
+  imports = [ ./term ./packages.nix ];
   home.username = "josh";
   home.homeDirectory = "/home/josh";
 
@@ -23,31 +23,6 @@
   # home.file.".xxx".text = ''
   #     xxx
   # '';
-
-  # Packages that should be installed to the user profile.
-  home.packages = with pkgs; [
-    zip
-    xz
-    unzip
-    ripgrep
-    lazygit
-    jq
-    fzf
-    fd
-    which
-    nix-output-monitor
-    btop
-    strace
-    ltrace
-    lsof
-    sysstat
-    gcc
-    luarocks
-    lua
-    python3
-    cargo
-    nixfmt-classic
-  ];
 
   programs.git = {
     enable = true;

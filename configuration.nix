@@ -6,8 +6,7 @@
 
 {
   imports = [ # Include the results of the hardware scan.
-    ./system/fonts.nix
-    ./system/hyprland.nix
+    ./system
     ./hardware-configuration.nix
   ];
 

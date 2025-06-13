@@ -15,11 +15,11 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
-	home-manager.nixosModules.home-manager
+        home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.josh = import ./home.nix;
+          home-manager.users.josh = import ./home;
         }
       ];
     };

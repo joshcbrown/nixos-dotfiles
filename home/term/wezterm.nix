@@ -57,9 +57,6 @@
       	-- { key = "s", mods = "CTRL|SHIFT", action = act.SwitchToWorkspace },
       	-- { key = "n", mods = "CTRL|SHIFT", action = act.NewWorkspace },
       	-- { key = "r", mods = "CTRL|SHIFT", action = act.RenameWorkspace },
-      	{ key = "c", mods = "CTRL|SHIFT", action = act.SwitchToWorkspace({ name = "client" }) },
-      	{ key = "d", mods = "CTRL|SHIFT", action = act.SwitchToWorkspace({ name = "default" }) },
-      	{ key = "f", mods = "CTRL|SHIFT", action = act.SwitchToWorkspace({ name = "frontend" }) },
       	{
       		key = "c",
       		mods = "ALT|SHIFT",

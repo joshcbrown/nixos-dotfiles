@@ -1,6 +1,4 @@
 { pkgs, inputs, ... }: {
-  imports = [ ./binds.nix ./settings.nix ./rules.nix ];
-
   programs.hyprland = {
     enable = true;
     withUWSM = true;
@@ -14,3 +12,4 @@
     [ inputs.hyprland-contrib.packages.${pkgs.system}.grimblast ];
   environment.variables.NIXOS_OZONE_WL = "1";
 }
+

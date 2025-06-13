@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  imports = [ ./home ];
   home.username = "josh";
   home.homeDirectory = "/home/josh";
 
@@ -59,11 +60,6 @@
   };
 
   programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
-  programs.wezterm = {
     enable = true;
     enableZshIntegration = true;
   };

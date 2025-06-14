@@ -9,6 +9,7 @@
     ./cursor.nix
     ./wlogout.nix
     ./services
+    ./sioyek.nix
   ];
   home.username = "josh";
   home.homeDirectory = "/home/josh";

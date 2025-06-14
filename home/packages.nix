@@ -29,6 +29,7 @@
     neovide
     playerctl
     wlogout
+    isabelle
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
 }

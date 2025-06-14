@@ -13,6 +13,7 @@
       # finalize startup
       "uwsm finalize"
       "waybar"
+      "swayosd-server"
       # set cursor for HL itself
       # "hyprctl setcursor ${cursorName} ${toString 16}"
       # "hyprlock"

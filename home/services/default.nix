@@ -1,1 +1,4 @@
-{ imports = [ ./hyprpaper.nix ]; }
+{
+  imports = [ ./hyprpaper.nix ];
+  services.swayosd.enable = true;
+}

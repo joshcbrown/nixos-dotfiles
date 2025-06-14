@@ -7,6 +7,7 @@
     ./hyprland
     ./anyrun
     ./cursor.nix
+    ./wlogout.nix
     ./services
   ];
   home.username = "josh";

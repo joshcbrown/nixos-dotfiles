@@ -51,7 +51,7 @@
       * {
         border: none;
         border-radius: 0;
-        font-family: "JetBrains Mono", monospace;
+        font-family: Inter, Roboto, Helvetica, Arial, sans-serif;
         font-size: 13px;
         min-height: 0;
       }

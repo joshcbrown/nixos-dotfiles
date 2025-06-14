@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   home.packages = with pkgs; [
     zip
     xz
@@ -24,5 +24,11 @@
     wl-clipboard
     haskell.compiler.ghc910
     cabal-install
+    brightnessctl
+    (haskell-language-server.override { supportedGhcVersions = [ "910" ]; })
+    neovide
+    playerctl
+    wlogout
+    inputs.zen-browser.packages.${pkgs.system}.default
   ];
 }

@@ -31,6 +31,9 @@
     wlogout
     isabelle
     emacs
+    nh
+    libnotify
+    glib
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
 }

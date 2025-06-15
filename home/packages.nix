@@ -30,6 +30,7 @@
     playerctl
     wlogout
     isabelle
+    emacs
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
 }

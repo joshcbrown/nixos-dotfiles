@@ -26,7 +26,8 @@ in {
       # compositor commands
       "$mod SHIFT, E, exec, pkill Hyprland"
       "$mod, D, exec, pkill anyrun || uwsm app -- anyrun"
-      "$mod, W, exec, firefox"
+      "$mod, W, exec, zen"
+      "$mod, B, exec, ${toggle "waybar"}"
       "$mod, Q, killactive,"
       "$mod, F, fullscreen,"
       "$mod, G, togglegroup,"

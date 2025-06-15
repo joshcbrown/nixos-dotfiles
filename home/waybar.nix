@@ -10,8 +10,8 @@
         spacing = 4;
 
         modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ ];
-        modules-right = [ "disk" "cpu" "memory" "clock" ];
+        modules-center = [ "clock" ];
+        modules-right = [ "disk" "cpu" "memory" "tray" ];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
@@ -43,6 +43,12 @@
             <big>{:%Y %B}</big>
             <tt><small>{calendar}</small></tt>'';
           format-alt = "{:%Y-%m-%d}";
+        };
+
+        tray = {
+          icon-size = 18;
+          spacing = 6;
+          show-passive-items = false;
         };
       };
     };
@@ -109,6 +115,37 @@
       #clock {
         padding: 0 10px;
         color: #ffffff;
+      }
+
+      #tray {
+        padding: 0 10px;
+        background-color: rgba(100, 114, 125, 0.3);
+        border-radius: 3px;
+        margin-right: 8px;
+      }
+
+      #tray > .passive {
+        -gtk-icon-effect: dim;
+      }
+
+      #tray > .needs-attention {
+        -gtk-icon-effect: highlight;
+      }
+
+      #tray menu {
+        background-color: rgba(43, 48, 59, 0.9);
+        border: 1px solid rgba(100, 114, 125, 0.5);
+        border-radius: 5px;
+        color: #ffffff;
+      }
+
+      #tray menuitem {
+        padding: 4px 8px;
+        color: #ffffff;
+      }
+
+      #tray menuitem:hover {
+        background-color: rgba(100, 114, 125, 0.5);
       }
     '';
   };

@@ -14,6 +14,7 @@
       "uwsm finalize"
       "waybar"
       "swayosd-server"
+      "dropbox start"
       # set cursor for HL itself
       # "hyprctl setcursor ${cursorName} ${toString 16}"
       # "hyprlock"

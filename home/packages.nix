@@ -18,8 +18,8 @@
     gcc
     luarocks
     lua
-    python3
     cargo
+    httpie
     nixfmt-classic
     wl-clipboard
     haskell.compiler.ghc910
@@ -34,6 +34,9 @@
     nh
     libnotify
     glib
+    uv
+    nodejs
+    vscode
     inputs.zen-browser.packages.${pkgs.system}.default
   ];
 }

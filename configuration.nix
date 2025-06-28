@@ -100,14 +100,18 @@
   # $ nix search wget
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.auto-optimise-store = true;
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 1w";
-  };
   environment.systemPackages = with pkgs; [
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     git
+    zlib
+    (python3.withPackages (ps:
+      with ps; [
+        beautifulsoup4
+        jupyterlab
+        pandas
+        statsmodels
+        scikitlearn
+      ]))
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

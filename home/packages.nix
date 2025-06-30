@@ -26,6 +26,7 @@
     cabal-install
     brightnessctl
     (haskell-language-server.override { supportedGhcVersions = [ "910" ]; })
+    gemini-cli
     neovide
     playerctl
     wlogout
